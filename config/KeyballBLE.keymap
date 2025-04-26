@@ -74,6 +74,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
             >;
+
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         NUM {
@@ -81,8 +83,10 @@
 &kp MINUS                  &kp PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9                                               &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &kp SLASH                  &kp ASTRK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
 &mt LEFT_SHIFT KP_NUMLOCK  &kp DOT    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&kp NUMBER_1               &trans     &kp KP_NUMBER_0  &trans           &trans           &trans                       &trans          &trans                                                                     &kp PIPE
+&mt LEFT_CONTROL GRAVE     &trans     &kp KP_NUMBER_0  &trans           &trans           &trans                       &trans          &trans                                                                     &kp PIPE
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
         };
 
         ARROW {
