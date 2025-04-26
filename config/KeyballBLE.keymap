@@ -91,21 +91,21 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE      &kp PAGE_UP    &kp LS(LC(TAB))         &kp UP_ARROW    &kp LC(TAB)                            &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp PAGE_DOWN  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp END        &kp LS(LG(LEFT_ARROW))  &trans          &kp LS(LG(RIGHT))  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans         &trans                  &trans          &trans             &trans      &trans  &trans                          &trans
+&kp ESCAPE          &kp PAGE_UP    &kp LC(LG(LEFT_ARROW))  &kp UP_ARROW    &kp LC(LG(RIGHT))                      &trans  &trans  &trans  &trans  &trans
+&kp HOME            &kp PAGE_DOWN  &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_SHIFT END  &kp END        &kp LG(LEFT)            &kp LG(TAB)     &kp LG(RIGHT)      &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans              &trans         &trans                  &trans          &trans             &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         MOUSE {
             bindings = <
-&trans    &trans     &trans     &trans     &trans                           &trans    &trans     &trans     &trans     &trans
-&mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &mkp LCLK      &trans  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5
-&trans    &trans     &trans     &trans     &trans    &mkp RCLK      &trans  &trans    &trans     &trans     &trans     &trans
-&trans    &trans     &trans     &trans     &trans    &trans         &trans  &trans                                     &trans
+&trans    &trans     &trans     &trans     &trans                           &trans    &trans     &mkp MCLK  &trans    &trans
+&mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &mkp LCLK      &trans  &mkp MB4  &mkp LCLK  &mkp RCLK  &mkp MB5  &mkp MB5
+&trans    &trans     &trans     &trans     &trans    &mkp RCLK      &trans  &trans    &trans     &trans     &trans    &trans
+&trans    &trans     &trans     &trans     &trans    &trans         &trans  &trans                                    &trans
             >;
         };
 
