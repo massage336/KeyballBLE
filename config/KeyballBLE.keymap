@@ -80,13 +80,13 @@
 
         NUM {
             bindings = <
-&kp LS(SINGLE_QUOTE)       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SEMICOLON)                                         &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)
-&kp SLASH                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_5  &kp MINUS          &kp LC(LA(KP_NUMBER_0))      &kp RBRC  &kp LS(COMMA)     &kp LS(NUMBER_7)  &kp AT            &kp INT_YEN       &kp LS(EQUAL)
-&mt LEFT_SHIFT KP_NUMLOCK  &kp KP_NUMBER_1  &kp KP_NUMBER_1  &kp KP_NUMBER_3  &kp KP_NUMBER_0    &kp EQUAL                    &kp NUHS  &kp LS(PERIOD)    &trans            &trans            &trans            &kp SINGLE_QUOTE
-&mt LEFT_CONTROL GRAVE     &kp PERCENT      &kp KP_NUMBER_0  &trans           &trans             &trans                       &trans    &trans                                                                  &kp PIPE
+&kp LS(SINGLE_QUOTE)       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SEMICOLON)                                   &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)
+&kp SLASH                  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_5  &kp MINUS          &kp C_MUTE         &kp RS(RBRC)  &kp LS(COMMA)     &kp LS(NUMBER_7)  &kp LBRC          &kp INT_YEN       &kp LS(EQUAL)
+&mt LEFT_SHIFT KP_NUMLOCK  &kp KP_NUMBER_1  &kp KP_NUMBER_1  &kp KP_NUMBER_3  &kp KP_NUMBER_0    &kp LS(MINUS)      &kp NUHS      &kp LS(PERIOD)    &trans            &kp RS(LBRC)      &kp RS(INT_YEN)   &kp SINGLE_QUOTE
+&mt LEFT_CONTROL GRAVE     &kp PERCENT      &trans           &trans           &trans             &trans             &trans        &trans                                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_AC_ZOOM_OUT C_AC_ZOOM_IN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         ARROW {
@@ -107,6 +107,8 @@
 &trans  &trans     &trans     &trans     &trans    &mkp RCLK      &trans  &trans  &trans     &trans     &trans    &trans
 &trans  &trans     &trans     &trans     &trans    &trans         &trans  &trans                                  &trans
             >;
+
+            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
         };
 
         SCROLL {
@@ -117,7 +119,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&ROTATE SCRL_LEFT SCRL_RIGHT>;
+            sensor-bindings = <&ROTATE MOVE_Y(10) MOVE_Y(-10)>;
         };
 
         layer_6 {
@@ -127,6 +129,8 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kt KP_N4  &trans      &bootloader     &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans     &trans      &trans          &trans                                                  &bt BT_CLR_ALL
             >;
+
+            sensor-bindings = <&ROTATE MOVE_X(10) MOVE_X(-10)>;
         };
     };
 };
