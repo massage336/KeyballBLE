@@ -90,10 +90,10 @@
 
         NUM {
             bindings = <
-&kp LS(SINGLE_QUOTE)       &kp LS(SEMICOLON)  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp LS(KP_NUMBER_9)                                            &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)
-&kp SLASH                  &kp MINUS          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6      &trans             &kp RS(RIGHT_BRACKET)  &kp LS(COMMA)     &kp LS(NUMBER_7)  &kp LBRC          &kp INT_YEN       &kp LS(EQUAL)
-&mt LEFT_SHIFT KP_NUMLOCK  &kp KP_NUMBER_0    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3      &kp LS(MINUS)      &kp NUHS               &kp LS(PERIOD)    &trans            &kp RS(LBRC)      &kp RS(INT_YEN)   &kp SINGLE_QUOTE
-&mt LEFT_CONTROL GRAVE     &kp PERCENT        &trans           &trans           &trans               &trans             &trans                 &trans                                                                  &trans
+&kp LS(NUMBER_1)           &kp LS(NUMBER_2)  &kp LS(NUMBER_3)     &kp LS(NUMBER_4)  &kp LS(NUMBER_6)                                        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)
+&kp LS(NUMBER_7)           &kp LEFT_BRACE    &kp INTERNATIONAL_3  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &trans             &kp RIGHT_BRACKET  &kp LS(COMMA)     &kp LS(NUMBER_7)  &kp LBRC          &kp INT_YEN       &kp LS(EQUAL)
+&mt LEFT_SHIFT KP_NUMLOCK  &kp KP_NUMBER_0   &kp KP_NUMBER_1      &kp LEFT_BRACKET  &kp NUHS          &kp LS(MINUS)      &kp NUHS           &kp LS(PERIOD)    &trans            &kp RS(LBRC)      &kp RS(INT_YEN)   &kp SINGLE_QUOTE
+&mt LEFT_CONTROL GRAVE     &kp PERCENT       &trans               &trans            &trans            &trans             &trans             &trans                                                                  &trans
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
