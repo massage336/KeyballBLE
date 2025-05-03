@@ -12,7 +12,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <400>;
 };
 
 / {
@@ -61,7 +61,7 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <600>;
+            tapping-term-ms = <400>;
         };
 
         ROTATE: ROTATE {
@@ -70,7 +70,7 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
-            tap-ms = <2>;
+            tap-ms = <20>;
         };
     };
 
