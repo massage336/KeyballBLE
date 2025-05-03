@@ -69,6 +69,8 @@
             label = "ROTATE";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
+
+            tap-ms = <2>;
         };
     };
 
@@ -99,10 +101,10 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
-&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET      &kp LS(MINUS)   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp MINUS
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp UNDERSCORE        &kp KP_NUMLOCK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
-&kp LEFT_CONTROL        &kp SEMICOLON     &trans            &trans             &trans            &trans                &trans          &trans                                                              &kp SLASH
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET        &kp LS(MINUS)   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp MINUS
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(UNDERSCORE)      &kp KP_NUMLOCK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
+&kp LEFT_CONTROL        &kp SEMICOLON     &trans            &trans             &trans            &trans                  &trans          &trans                                                              &kp SLASH
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
