@@ -22,6 +22,16 @@
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <20 21>;
         };
+
+        left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <18 19>;
+        };
+
+        right_click {
+            bindings = <&mkp RCLK>;
+            key-positions = <20 19>;
+        };
     };
 
     macros {
