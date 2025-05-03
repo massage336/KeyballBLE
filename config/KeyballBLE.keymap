@@ -32,6 +32,16 @@
             bindings = <&mkp RCLK>;
             key-positions = <20 19>;
         };
+
+        back {
+            bindings = <&mkp MB4>;
+            key-positions = <6 7>;
+        };
+
+        next {
+            bindings = <&mkp MB5>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
@@ -68,10 +78,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E         &kp R                 &kp T                                                             &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                 &kp G        &kp PRINTSCREEN                    &kp LS(N8)        &kp H      &kp J  &kp K      &kp L    &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &lt 5 GRAVE                        &kp LS(NUMBER_9)  &kp N      &kp M  &kp COMMA  &kp DOT  &lt 5 SLASH
-&mt LCTRL LC(Z)   &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 TAB  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE     &kp ENTER                             &kp DEL
+&lt 6 Q           &kp W         &kp E             &kp R                             &kp T                                                          &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D             &kp F                             &kp G        &kp PRINTSCREEN                    &kp SLASH      &kp H      &kp J  &kp K      &kp L    &lt 4 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C             &kp V                             &kp B        &lt 4 LC(INT_YEN)                  &kt COLON      &kp N      &kp M  &kp COMMA  &kp DOT  &lt 5 LS(PERIOD)
+&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT TAB  &lt_to_layer_0 2 INTERNATIONAL_4  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE  &kp ENTER                             &mt LEFT_SHIFT DEL
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -79,10 +89,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &kp C_MUTE      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans          &trans   &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans          &trans   &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                          &kp F1   &kp F2   &kp F3   &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &kp C_MUTE      &trans  &kp F6   &kp F7   &kp F8   &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp F11  &kp F12  &kp F13  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans                             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -90,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)           &kp LS(NUMBER_2)  &kp LS(NUMBER_3)     &kp LS(NUMBER_4)  &kp LS(NUMBER_6)                                        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_6)
-&kp LS(NUMBER_7)           &kp LEFT_BRACE    &kp INTERNATIONAL_3  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &trans             &kp RIGHT_BRACKET  &kp LS(COMMA)     &kp LS(NUMBER_7)  &kp LBRC          &kp INT_YEN       &kp LS(EQUAL)
-&mt LEFT_SHIFT KP_NUMLOCK  &kp KP_NUMBER_0   &kp KP_NUMBER_1      &kp LEFT_BRACKET  &kp NUHS          &kp LS(MINUS)      &kp NUHS           &kp LS(PERIOD)    &trans            &kp RS(LBRC)      &kp RS(INT_YEN)   &kp SINGLE_QUOTE
-&mt LEFT_CONTROL GRAVE     &kp PERCENT       &trans               &trans            &trans            &trans             &trans             &trans                                                                  &trans
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)     &kp LS(PERIOD)                                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &trans             &kp LS(MINUS)   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp MINUS
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp LEFT_BRACKET  &kp NUHS          &kp LS(SLASH)      &kp KP_NUMLOCK  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
+&kp LEFT_CONTROL        &kp SEMICOLON     &trans            &trans            &trans            &trans             &trans          &trans                                                              &kp SLASH
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
