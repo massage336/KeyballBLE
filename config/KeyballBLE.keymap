@@ -89,10 +89,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E                     &kp R                             &kp T                                                             &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                    &kp SLASH         &kp H      &lt 5 J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                          &kp SINGLE_QUOTE  &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
-&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_4  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE     &kp ENTER                               &mt RIGHT_CONTROL DEL
+&lt 6 Q           &kp W         &kp E                     &kp R                       &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D                     &kp F                       &kp G        &kp PRINTSCREEN                    &kp SLASH            &kp H      &lt 5 J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                       &kp B        &lt 4 TAB                          &kp SINGLE_QUOTE     &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
+&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 BACKSPACE  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp INTERNATIONAL_4  &kp ENTER                               &mt RIGHT_CONTROL DEL
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
