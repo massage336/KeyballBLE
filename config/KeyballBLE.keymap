@@ -31,17 +31,27 @@
 
         right_click {
             bindings = <&mkp RCLK>;
-            key-positions = <20 19>;
+            key-positions = <30 31>;
         };
 
-        back {
+        pre {
             bindings = <&kp LC(Z)>;
-            key-positions = <6 7>;
+            key-positions = <19 20>;
+        };
+
+        for {
+            bindings = <&kp LC(Y)>;
+            key-positions = <31 32>;
         };
 
         next {
-            bindings = <&kp LC(Y)>;
-            key-positions = <7 8>;
+            bindings = <&mkp MB5>;
+            key-positions = <29 30>;
+        };
+
+        before {
+            bindings = <&mkp MB4>;
+            key-positions = <17 18>;
         };
     };
 
