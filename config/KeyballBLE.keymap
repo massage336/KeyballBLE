@@ -113,6 +113,21 @@
             bindings = <&kp LC(TAB)>;
             key-positions = <7 8 9>;
         };
+
+        yamakakko {
+            bindings = <&yamakakko>;
+            key-positions = <3 4>;
+        };
+
+        marukakko {
+            bindings = <&marukakko>;
+            key-positions = <14 13>;
+        };
+
+        kagikakko {
+            bindings = <&kagikakko>;
+            key-positions = <25 26>;
+        };
     };
 
     macros {
@@ -121,6 +136,34 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        kagikakko: kagikakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt INTERNATIONAL_4 &kp RIGHT_BRACKET &kp NUHS &kp ENTER &kp LEFT_ARROW>;
+            label = "KAGIKAKKO";
+        };
+
+        marukakko: marukakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(NUMBER_8) &kp LS(NUMBER_9) &kp ENTER &kp LEFT_ARROW>;
+            label = "MARUKAKKO";
+        };
+
+        yamakakko: yamakakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA) &kp LS(PERIOD) &kp ENTER &kp LEFT_ARROW>;
+            label = "YAMAKAKKO";
+        };
+
+        d1: d1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp INT_MUHENKAN &kp KP_NUMBER_1 &kp INTERNATIONAL_4>;
+            label = "D1";
         };
     };
 
@@ -150,8 +193,8 @@
         default_layer {
             bindings = <
 &lt 6 Q           &kp W         &kp E                     &kp R                             &kp T                                                             &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                    &kp SLASH         &kp H      &lt 5 J  &lt 4 K    &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                          &kp SINGLE_QUOTE  &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
+&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                    &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                          &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
 &mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_4  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE     &kp ENTER                               &mt RIGHT_CONTROL DEL
             >;
 
@@ -173,19 +216,19 @@
             bindings = <
 &kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
 &kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp KP_NUMLOCK      &kp LS(MINUS)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp MINUS
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp UP_ARROW   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp UP_ARROW   &d1              &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
 &kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans         &trans                                                              &kp SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
         };
 
-        ARROW {
+        symbol {
             bindings = <
-&kp ESCAPE        &kp LG(NUMBER_1)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(X)  &kp UP_ARROW    &none      &kp PAGE_UP    &kp HOME
-&kp LG(NUMBER_5)  &kp LG(NUMBER_2)  &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT  &none          &none
-&kp LG(NUMBER_6)  &kp LG(NUMBER_3)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none      &kp PAGE_DOWN  &kt END
-&kp LG(NUMBER_7)  &kp LG(NUMBER_4)  &none                   &trans              &trans             &trans                &trans     &trans                                               &none
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                   &kp LC(X)  &kp UP_ARROW    &none            &kp PAGE_UP    &kp HOME
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp KP_NUMLOCK      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT_ARROW  &none          &none
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none            &kp PAGE_DOWN  &kp END
+&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans     &trans                                                     &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
@@ -222,6 +265,28 @@
             >;
 
             sensor-bindings = <&ROTATE MOVE_X(10) MOVE_X(-10)>;
+        };
+
+        ARROW {
+            bindings = <
+&kp ESCAPE        &kp LG(NUMBER_1)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(X)  &kp UP_ARROW    &none      &kp PAGE_UP    &kp HOME
+&kp LG(NUMBER_5)  &kp LG(NUMBER_2)  &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT  &none          &none
+&kp LG(NUMBER_6)  &kp LG(NUMBER_3)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none      &kp PAGE_DOWN  &kt END
+&kp LG(NUMBER_7)  &kp LG(NUMBER_4)  &none                   &trans              &trans             &trans                &trans     &trans                                               &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
+        };
+
+        layer_7 {
+            bindings = <
+&kp ESCAPE        &kp LG(NUMBER_1)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(X)  &kp UP_ARROW    &none      &kp PAGE_UP    &kp HOME
+&kp LG(NUMBER_5)  &kp LG(NUMBER_2)  &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT  &none          &none
+&kp LG(NUMBER_6)  &kp LG(NUMBER_3)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none      &kp PAGE_DOWN  &kt END
+&kp LG(NUMBER_7)  &kp LG(NUMBER_4)  &none                   &trans              &trans             &trans                &trans     &trans                                               &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
         };
     };
 };
