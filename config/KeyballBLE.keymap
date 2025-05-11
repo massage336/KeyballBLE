@@ -141,7 +141,7 @@
         kagikakko: kagikakko {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt INTERNATIONAL_4 &kp RIGHT_BRACKET &kp NUHS &kp ENTER &kp LEFT_ARROW>;
+            bindings = <&kp RIGHT_BRACKET &kp NUHS &kp ENTER &kp LEFT_ARROW>;
             label = "KAGIKAKKO";
         };
 
@@ -159,10 +159,10 @@
             label = "YAMAKAKKO";
         };
 
-        d1: d1 {
+        Equal: d1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_MUHENKAN &kp KP_NUMBER_1 &kp INTERNATIONAL_4>;
+            bindings = <&kp INT_MUHENKAN &kp LS(MINUS)>;
             label = "D1";
         };
     };
@@ -192,10 +192,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E                     &kp R                             &kp T                                                             &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                    &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                          &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
-&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_4  &lt 3 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE     &kp ENTER                               &mt RIGHT_CONTROL DEL
+&lt 6 Q           &kp W         &kp E                     &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                             &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
+&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &mt RIGHT_CONTROL DEL
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -216,7 +216,7 @@
             bindings = <
 &kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
 &kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp KP_NUMLOCK      &kp LS(MINUS)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp MINUS
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp UP_ARROW   &d1              &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp UP_ARROW   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
 &kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans         &trans                                                              &kp SLASH
             >;
 
