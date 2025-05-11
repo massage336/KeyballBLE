@@ -19,11 +19,6 @@
     combos {
         compatible = "zmk,combos";
 
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
         left_click {
             bindings = <&mkp LCLK>;
             key-positions = <18 19>;
@@ -72,6 +67,51 @@
         desktop-right {
             bindings = <&kp LG(LC(RIGHT))>;
             key-positions = <32 33>;
+        };
+
+        new-folder {
+            bindings = <&kp RG(E)>;
+            key-positions = <17 18>;
+        };
+
+        change-desktop {
+            bindings = <&kp RG(D)>;
+            key-positions = <20 21>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <6 7 8>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <18 19 20>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <30 31 32>;
+        };
+
+        save {
+            bindings = <&kp LC(S)>;
+            key-positions = <17 18 19>;
+        };
+
+        close {
+            bindings = <&kp LC(W)>;
+            key-positions = <20 19 21>;
+        };
+
+        left-tab {
+            bindings = <&kp LC(LS(TAB))>;
+            key-positions = <5 6 7>;
+        };
+
+        right-tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <7 8 9>;
         };
     };
 
