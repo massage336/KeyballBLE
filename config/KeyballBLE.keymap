@@ -53,6 +53,26 @@
             bindings = <&mkp RCLK>;
             key-positions = <19 20>;
         };
+
+        screen-left {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <5 6>;
+        };
+
+        desktop-left {
+            bindings = <&kp LG(LC(LEFT))>;
+            key-positions = <29 30>;
+        };
+
+        screen-right {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <8 9>;
+        };
+
+        desktop-right {
+            bindings = <&kp LG(LC(RIGHT))>;
+            key-positions = <32 33>;
+        };
     };
 
     macros {
