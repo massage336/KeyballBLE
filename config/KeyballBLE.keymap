@@ -192,10 +192,10 @@
 
         default_layer {
             bindings = <
-&lt 6 Q           &kp W         &kp E                     &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C                     &kp V                             &kp B        &lt 4 TAB                             &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(SLASH)
-&mt LCTRL LC(Z)   &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &mt RIGHT_CONTROL DEL
+&lt 6 TAB           &kp W         &kp E                     &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp P
+&mt LEFT_SHIFT A    &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &mt RIGHT_SHIFT MINUS
+&mt LEFT_CONTROL Z  &kp X         &kp C                     &kp V                             &kp B        &kt LS(INTERNATIONAL_1)               &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
+&kp Q               &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &kp DELETE
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -227,7 +227,7 @@
             bindings = <
 &kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                   &kp LC(X)  &kp UP_ARROW    &none            &kp PAGE_UP    &kp HOME
 &kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp KP_NUMLOCK      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT_ARROW  &none          &none
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none            &kp PAGE_DOWN  &kp END
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp ESC             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none            &kp PAGE_DOWN  &kp END
 &kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans     &trans                                                     &none
             >;
 
