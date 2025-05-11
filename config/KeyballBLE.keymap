@@ -111,21 +111,21 @@
 
         NUM {
             bindings = <
-&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                          &kp PERCENT      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp RS(SEMICOLON)
-&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp LEFT_BRACKET      &kp LS(MINUS)   &kp KP_NUMBER_0  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)        &kp KP_NUMLOCK  &kp PERIOD       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LS(SINGLE_QUOTE)
-&kp LEFT_CONTROL        &kp SEMICOLON     &none             &trans             &trans            &trans                &trans          &trans                                                              &kp SLASH
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERCENT      &kp RS(SEMICOLON)
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp KP_NUMLOCK      &kp LS(MINUS)  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp LANGUAGE_6   &kp KP_NUMBER_0  &kp MINUS
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp UP_ARROW   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(SINGLE_QUOTE)
+&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans         &trans                                                              &kp SLASH
             >;
 
-            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
         };
 
         ARROW {
             bindings = <
-&kp ESCAPE  &kp LC(S)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                          &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(N5)  &kp LG(NUMBER_6)  &kp LG(N7)
-&none       &none      &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LG(NUMBER_2)  &kp LEFT_ARROW    &kp UP_ARROW      &kp RIGHT   &kp PAGE_UP       &kp HOME
-&none       &kp LC(W)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LG(NUMBER_1)  &none             &kp DOWN_ARROW    &none       &kp PAGE_DOWN     &kt END
-&none       &none      &none                   &trans              &trans             &trans                &trans            &trans                                                            &none
+&kp ESCAPE        &kp LG(NUMBER_1)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(C)  &kp UP_ARROW    &none      &none          &none
+&kp LG(NUMBER_5)  &kp LG(NUMBER_2)  &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LC(S)  &kp LC(X)  &kp LEFT_ARROW  &kp RIGHT  &kp PAGE_UP    &kp HOME
+&kp LG(NUMBER_6)  &kp LG(NUMBER_3)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none      &kp PAGE_DOWN  &kt END
+&kp LG(NUMBER_7)  &kp LG(NUMBER_4)  &none                   &trans              &trans             &trans                &trans     &trans                                               &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
