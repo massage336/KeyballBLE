@@ -12,7 +12,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <400>;
+    tapping-term-ms = <600>;
 };
 
 / {
@@ -128,6 +128,16 @@
             bindings = <&kagikakko>;
             key-positions = <25 26>;
         };
+
+        change-folder {
+            bindings = <&kp LG(NUMBER_1)>;
+            key-positions = <29 30 31>;
+        };
+
+        change-chrome {
+            bindings = <&kp LG(NUMBER_2)>;
+            key-positions = <31 32 33>;
+        };
     };
 
     macros {
@@ -165,6 +175,13 @@
             bindings = <&kp INT_MUHENKAN &kp LS(MINUS)>;
             label = "D1";
         };
+
+        mailreset: mailreset {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp PAGE_UP &kp LC(V) &kp LS(PAGE_UP) &kp LC(INT_YEN)>;
+            label = "MAILRESET";
+        };
     };
 
     behaviors {
@@ -192,10 +209,10 @@
 
         default_layer {
             bindings = <
-&lt 6 TAB           &kp W         &kp E                     &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp P
-&mt LEFT_SHIFT A    &kp S         &kp D                     &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &mt RIGHT_SHIFT MINUS
-&mt LEFT_CONTROL Z  &kp X         &kp C                     &kp V                             &kp B        &kt LS(INTERNATIONAL_1)               &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
-&kp Q               &kp LEFT_WIN  &mt LEFT_ALT LC(INT_YEN)  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &kp DELETE
+&mt LEFT_SHIFT TAB  &kp W         &kp E       &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp RS(P)
+&mt LEFT_SHIFT A    &kp S         &kp D       &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &mt RIGHT_SHIFT MINUS
+&mt LEFT_CONTROL Z  &kp X         &kp C       &kp V                             &kp B        &mt LEFT_ALT F4                       &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
+&mt LEFT_CONTROL Q  &kp LEFT_WIN  &mailreset  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &kp DELETE
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
