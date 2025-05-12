@@ -12,7 +12,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <600>;
+    tapping-term-ms = <400>;
 };
 
 / {
@@ -179,7 +179,7 @@
         mailreset: mailreset {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(C) &kp PAGE_UP &kp LC(V) &kp LS(PAGE_UP) &kp LC(INT_YEN)>;
+            bindings = <&kp LC(C) &kp LC(HOME) &kp LC(V) &kp LS(PAGE_UP) &kp LC(INT_YEN)>;
             label = "MAILRESET";
         };
     };
@@ -210,8 +210,8 @@
         default_layer {
             bindings = <
 &mt LEFT_SHIFT TAB  &kp W         &kp E       &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp RS(P)
-&mt LEFT_SHIFT A    &kp S         &kp D       &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &mt RIGHT_SHIFT MINUS
-&mt LEFT_CONTROL Z  &kp X         &kp C       &kp V                             &kp B        &mt LEFT_ALT F4                       &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
+&kp A               &kp S         &kp D       &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &lt 4 K    &kp L    &mt RIGHT_SHIFT MINUS
+&mt LEFT_SHIFT Z    &kp X         &kp C       &kp V                             &kp B        &mt LEFT_ALT F4                       &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
 &mt LEFT_CONTROL Q  &kp LEFT_WIN  &mailreset  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp BACKSPACE     &kp ENTER                               &kp DELETE
             >;
 
