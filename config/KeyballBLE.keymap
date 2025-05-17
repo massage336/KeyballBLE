@@ -217,11 +217,11 @@
             label = "AVERAGE";
         };
 
-        in: pass {
+        in: in {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(T) &kp P &kp N2 &kp N2 &kp N2 &kp N3 &kp N3 &kp N3>;
-            label = "PASS";
+            label = "IN";
         };
     };
 
