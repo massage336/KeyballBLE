@@ -151,7 +151,7 @@
 
         bikkuri {
             bindings = <&kp LS(NUMBER_1)>;
-            key-positions = <24 25>;
+            key-positions = <1 2>;
         };
 
         in {
@@ -212,6 +212,21 @@
         pagedown {
             bindings = <&kp PAGE_DOWN>;
             key-positions = <28 29>;
+        };
+
+        question {
+            bindings = <&kp LS(SLASH)>;
+            key-positions = <11 12>;
+        };
+
+        windows {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <30 32>;
+        };
+
+        hyphen {
+            bindings = <&hyphen>;
+            key-positions = <25 24>;
         };
     };
 
@@ -285,6 +300,13 @@
             bindings = <&kp GRAVE &kp KP_NUMBER_1 &kp GRAVE>;
             label = "ONE";
         };
+
+        hyphen: hyphen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp MINUS &kp GRAVE>;
+            label = "HYPHEN";
+        };
     };
 
     behaviors {
@@ -312,10 +334,10 @@
 
         default_layer {
             bindings = <
-&lt 6 TAB           &kp W         &kp E        &kp R                        &kp T                                                 &kp Y      &kp U    &kp I      &kp O    &mt LEFT_ALT MINUS
-&kp A               &kp S         &kp D        &kp F                        &kp G        &kp PRINTSCREEN          &kp UP_ARROW    &kp H      &lt 5 J  &kp K      &kp L    &mt RIGHT_SHIFT P
-&mt LEFT_SHIFT Z    &kp X         &kp C        &kp V                        &kp B        &mt LEFT_CONTROL F4      &kp DOWN_ARROW  &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
-&mt LEFT_CONTROL Q  &kp LEFT_WIN  &lt 4 GRAVE  &lt_to_layer_0 2 LEFT_ARROW  &lt 3 SPACE  &lt 1 RIGHT_ARROW        &kp BACKSPACE   &kp ENTER                               &kp DELETE
+&lt 6 TAB           &kp W               &kp E                  &kp R                        &kp T                                                 &kp Y      &kp U    &kp I      &kp O    &mt LEFT_ALT MINUS
+&kp A               &kp S               &kp D                  &kp F                        &kp G        &kp PRINTSCREEN          &kp UP_ARROW    &kp H      &lt 5 J  &kp K      &kp L    &mt RIGHT_SHIFT P
+&mt LEFT_SHIFT Z    &kp X               &kp C                  &kp V                        &kp B        &mt LEFT_CONTROL F4      &kp DOWN_ARROW  &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(EQUAL)
+&mt LEFT_CONTROL Q  &mt LEFT_GUI GRAVE  &lt 4 INTERNATIONAL_5  &lt_to_layer_0 2 LEFT_ARROW  &lt 3 SPACE  &lt 1 RIGHT_ARROW        &kp BACKSPACE   &kp ENTER                               &kp DELETE
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -335,8 +357,8 @@
         NUM {
             bindings = <
 &none             &none  &kp RS(MINUS)  &kp MINUS         &kp LS(SEMI)                                              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COMMA        &kp PERCENT
-&none             &none  &sum           &kp LS(NUMBER_8)  &kp LS(NUMBER_9)      &kp KP_NUMLOCK      &kp UP_ARROW    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp LS(INTERNATIONAL_3)
-&kp LEFT_SHIFT    &none  &average       &kp SLASH         &kp RS(SINGLE_QUOTE)  &kp F2              &kp DOWN_ARROW  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp EQUAL
+&none             &none  &sum           &kp LS(NUMBER_8)  &kp LS(NUMBER_9)      &kp KP_NUMLOCK      &kp UP_ARROW    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp INTERNATIONAL_3
+&kp LEFT_SHIFT    &none  &average       &kp SLASH         &kp RS(SINGLE_QUOTE)  &kp F2              &kp DOWN_ARROW  &one             &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(EQUAL)
 &kp LEFT_CONTROL  &none  &none          &trans            &trans                &trans              &trans          &trans                                                              &kp PERCENT
             >;
 
