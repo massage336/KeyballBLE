@@ -226,7 +226,7 @@
 &mt LEFT_SHIFT TAB  &kp W         &kp E       &kp R                             &kp T                                                                &kp Y      &kp U    &kp I      &kp O    &kp BACKSPACE
 &kp A               &kp S         &kp D       &kp F                             &kp G        &kp PRINTSCREEN                       &kp SINGLE_QUOTE  &kp H      &lt 5 J  &kp K      &lt 4 L  &mt RIGHT_SHIFT P
 &mt LEFT_SHIFT Z    &kp X         &kp C       &kp V                             &kp B        &mt LEFT_ALT F4                       &kp SLASH         &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(SLASH)
-&mt LEFT_CONTROL Q  &kp LEFT_WIN  &mailreset  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &lt_to_layer_0 1 INTERNATIONAL_4      &kp MINUS         &kp ENTER                               &kp DELETE
+&mt LEFT_CONTROL Q  &kp LEFT_WIN  &mailreset  &lt_to_layer_0 2 INTERNATIONAL_5  &lt 3 SPACE  &mt LEFT_CONTROL INTERNATIONAL_4      &lt 1 MINUS       &kp ENTER                               &kp DELETE
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
