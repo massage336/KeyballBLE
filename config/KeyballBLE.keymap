@@ -262,7 +262,7 @@
         Equal: d1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INT_MUHENKAN &kp LS(MINUS)>;
+            bindings = <&kp GRAVE &kp LS(MINUS) &kp GRAVE>;
             label = "D1";
         };
 
@@ -276,14 +276,14 @@
         sum: sum {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RS(MINUS) &kp S &kp U &kp M &kp LS(NUMBER_8)>;
+            bindings = <&kp GRAVE &kp RS(MINUS) &kp S &kp U &kp M &kp LS(NUMBER_8) &kp GRAVE>;
             label = "SUM";
         };
 
         average: average {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RS(MINUS) &kp A &kp V &kp E &kp R &kp A &kp G &kp E &kp LS(NUMBER_8)>;
+            bindings = <&kp GRAVE &kp RS(MINUS) &kp A &kp V &kp E &kp R &kp A &kp G &kp E &kp LS(NUMBER_8) &kp GRAVE>;
             label = "AVERAGE";
         };
 
@@ -306,6 +306,139 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp MINUS &kp GRAVE>;
             label = "HYPHEN";
+        };
+
+        two: two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_2 &kp GRAVE>;
+            label = "TWO";
+        };
+
+        three: three {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_3 &kp GRAVE>;
+            label = "THREE";
+        };
+
+        four: four {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_4 &kp GRAVE>;
+            label = "FOUR";
+        };
+
+        five: five {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_5 &kp GRAVE>;
+            label = "FIVE";
+        };
+
+        six: six {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_6 &kp GRAVE>;
+            label = "SIX";
+        };
+
+        seven: seven {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_7 &kp GRAVE>;
+            label = "SEVEN";
+        };
+
+        eight: eight {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_8 &kp GRAVE>;
+            label = "EIGHT";
+        };
+
+        nine: nine {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_9 &kp GRAVE>;
+            label = "NINE";
+        };
+
+        zero: zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp KP_NUMBER_0 &kp GRAVE>;
+            label = "ZERO";
+        };
+
+        plus: plus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp LS(SEMI) &kp GRAVE>;
+            label = "PLUS";
+        };
+
+        minus: minus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp MINUS &kp GRAVE>;
+            label = "MINUS";
+        };
+
+        multiply: multiply {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp LS(SINGLE_QUOTE) &kp GRAVE>;
+            label = "MULTIPLY";
+        };
+
+        division: division {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp SLASH &kp GRAVE>;
+            label = "DIVISION";
+        };
+
+        period: period {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp PERIOD &kp GRAVE>;
+            label = "PERIOD";
+        };
+
+        conma: conma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp COMMA &kp GRAVE>;
+            label = "CONMA";
+        };
+
+        percent: percent {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp PERCENT &kp GRAVE>;
+            label = "PERCENT";
+        };
+
+        yen: yen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp INTERNATIONAL_3 &kp GRAVE>;
+            label = "YEN";
+        };
+
+        leftnumkakko: leftnumkakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt GRAVE &kp LS(NUMBER_8) &kp GRAVE>;
+            label = "LEFTNUMKAKKO";
+        };
+
+        rightnumkakko: rightnumkakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt GRAVE &kp LS(NUMBER_9) &kp GRAVE>;
+            label = "RIGHTNUMKAKKO";
         };
     };
 
@@ -334,8 +467,8 @@
 
         default_layer {
             bindings = <
-&lt 6 TAB           &kp W               &kp E                  &kp R                        &kp T                                                 &kp Y      &kp U    &kp I      &kp O    &mt LEFT_ALT MINUS
-&kp A               &kp S               &kp D                  &kp F                        &kp G        &kp PRINTSCREEN          &kp UP_ARROW    &kp H      &lt 5 J  &kp K      &kp L    &mt RIGHT_SHIFT P
+&lt 7 TAB           &kp W               &kp E                  &kp R                        &kp T                                                 &kp Y      &kp U    &kp I      &kp O    &mt LEFT_ALT MINUS
+&kp A               &kp S               &kp D                  &lt 6 F                      &kp G        &kp PRINTSCREEN          &kp UP_ARROW    &kp H      &lt 5 J  &kp K      &kp L    &mt RIGHT_SHIFT P
 &mt LEFT_SHIFT Z    &kp X               &kp C                  &kp V                        &kp B        &mt LEFT_CONTROL F4      &kp DOWN_ARROW  &kp N      &kp M    &kp COMMA  &kp DOT  &mt RIGHT_CONTROL LS(EQUAL)
 &mt LEFT_CONTROL Q  &mt LEFT_GUI GRAVE  &lt 4 INTERNATIONAL_5  &lt_to_layer_0 2 LEFT_ARROW  &lt 3 SPACE  &lt 1 RIGHT_ARROW        &kp BACKSPACE   &kp ENTER                               &kp DELETE
             >;
@@ -345,10 +478,10 @@
 
         FUNCTION {
             bindings = <
-&none  &none  &none  &none   &none                                        &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none  &none  &none  &none   &none   &kp C_MUTE      &kp INTERNATIONAL_4  &kp F4  &kp F5  &kp F6  &kp F11  &none
-&none  &none  &none  &none   &none   &none           &kp INTERNATIONAL_5  &kp F1  &kp F2  &kp F3  &kp F12  &none
-&none  &none  &none  &trans  &trans  &trans          &trans               &trans                           &none
+&kp TAB  &kp LS(TAB)  &kp LS(LC(SEMI))  &kp LC(L)          &kp LC(E)                                                &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none    &none        &none             &kp LS(LC(COMMA))  &kp LS(LC(PERIOD))  &kp C_MUTE      &kp INTERNATIONAL_4  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none    &none        &none             &none              &none               &kp ESCAPE      &kp INTERNATIONAL_5  &kp F1  &kp F2  &kp F3  &kp F12  &none
+&none    &none        &none             &trans             &trans              &trans          &trans               &trans                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -356,10 +489,10 @@
 
         NUM {
             bindings = <
-&none             &none  &kp RS(MINUS)  &kp MINUS         &kp LS(SEMI)                                              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COMMA        &kp PERCENT
-&none             &none  &sum           &kp LS(NUMBER_8)  &kp LS(NUMBER_9)      &kp KP_NUMLOCK      &kp UP_ARROW    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp INTERNATIONAL_3
-&kp LEFT_SHIFT    &none  &average       &kp SLASH         &kp RS(SINGLE_QUOTE)  &kp F2              &kp DOWN_ARROW  &one             &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp LS(EQUAL)
-&kp LEFT_CONTROL  &none  &none          &trans            &trans                &trans              &trans          &trans                                                              &kp PERCENT
+&none             &none  &Equal    &minus         &plus                                               &seven  &eight  &nine   &conma   &percent
+&none             &none  &sum      &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &kp UP_ARROW    &four   &five   &six    &zero    &yen
+&kp LEFT_SHIFT    &none  &average  &division      &multiply       &kp F2              &kp DOWN_ARROW  &one    &two    &three  &period  &kp LS(EQUAL)
+&kp LEFT_CONTROL  &none  &none     &trans         &trans          &trans              &trans          &trans                           &percent
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
@@ -398,6 +531,15 @@
             sensor-bindings = <&inc_dec_kp LA(PAGE_DOWN) LA(PAGE_UP)>;
         };
 
+        homeend {
+            bindings = <
+&none  &none  &none  &none     &none                             &none  &none  &none  &none  &none
+&none  &none  &none  &none     &none  &none        &kp LC(HOME)  &none  &none  &none  &none  &none
+&none  &none  &none  &none     &none  &none        &kp LC(END)   &none  &none  &none  &none  &none
+&none  &none  &none  &kp HOME  &none  &kp END      &none         &none                       &none
+            >;
+        };
+
         layer_6 {
             bindings = <
 &none  &none  &none  &none  &none                             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
@@ -411,7 +553,7 @@
 
         ARROW {
             bindings = <
-&kp ESCAPE        &kp LG(NUMBER_1)  &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(X)  &kp UP_ARROW    &none      &kp PAGE_UP    &kp HOME
+&none             &kp O             &kp LC(LG(LEFT_ARROW))  &kp LG(UP_ARROW)    &kp LC(LG(RIGHT))                                   &kp LC(X)  &kp UP_ARROW    &none      &kp PAGE_UP    &kp HOME
 &kp LG(NUMBER_5)  &kp LG(NUMBER_2)  &kp LG(LEFT_ARROW)      &kp LG(TAB)         &kp LG(RIGHT)      &kp K_CALCULATOR      &kp LC(S)  &kp LC(C)  &kp LEFT_ARROW  &kp RIGHT  &none          &none
 &kp LG(NUMBER_6)  &kp LG(NUMBER_3)  &none                   &kp LG(DOWN_ARROW)  &kp LG(E)          &kp LG(D)             &kp LC(W)  &kp LC(V)  &kp DOWN_ARROW  &none      &kp PAGE_DOWN  &kt END
 &kp LG(NUMBER_7)  &kp LG(NUMBER_4)  &none                   &trans              &trans             &trans                &trans     &trans                                               &none
