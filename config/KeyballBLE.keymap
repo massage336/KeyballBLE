@@ -215,7 +215,7 @@
         };
 
         question {
-            bindings = <&kp LS(LEFT)>;
+            bindings = <&kp LEFT>;
             key-positions = <11 12>;
         };
 
