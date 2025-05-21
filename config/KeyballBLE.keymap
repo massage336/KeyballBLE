@@ -50,32 +50,32 @@
         };
 
         screen-left {
-            bindings = <&kp LG(LEFT)>;
+            bindings = <&none>;
             key-positions = <5 6>;
         };
 
         desktop-left {
-            bindings = <&kp LG(LC(LEFT))>;
+            bindings = <&none>;
             key-positions = <29 30>;
         };
 
         screen-right {
-            bindings = <&kp LG(RIGHT)>;
+            bindings = <&none>;
             key-positions = <8 9>;
         };
 
         desktop-right {
-            bindings = <&kp LG(LC(RIGHT))>;
+            bindings = <&none>;
             key-positions = <32 33>;
         };
 
         new-folder {
-            bindings = <&kp RG(E)>;
+            bindings = <&none>;
             key-positions = <20 21>;
         };
 
         show-task {
-            bindings = <&kp RG(TAB)>;
+            bindings = <&none>;
             key-positions = <17 18>;
         };
 
@@ -522,10 +522,10 @@
 
         SCROLL {
             bindings = <
-&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                          &none  &none  &none  &none  &kp LC(TAB)
-&none             &none             &none             &none             &kp LG(NUMBER_6)  &none            &none  &none  &none  &none  &none  &kp LS(LC(TAB))
-&none             &none             &none             &none             &none             &kp LG(TAB)      &none  &none  &none  &none  &none  &none
-&none             &none             &none             &none             &none             &none            &none  &none                       &none
+&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                           &none  &none  &none  &none  &kp LC(TAB)
+&none             &none             &none             &none             &kp LG(NUMBER_6)  &none             &none  &none  &none  &none  &none  &kp LS(LC(TAB))
+&none             &none             &none             &none             &none             &kp UP_ARROW      &none  &none  &none  &none  &none  &none
+&none             &none             &none             &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT         &none  &none                       &none
             >;
 
             sensor-bindings = <&inc_dec_kp LA(PAGE_DOWN) LA(PAGE_UP)>;
