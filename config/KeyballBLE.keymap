@@ -26,22 +26,22 @@
 
         before {
             bindings = <&mkp MB4>;
-            key-positions = <30 31>;
+            key-positions = <31 18>;
         };
 
         pre {
             bindings = <&kp LC(Z)>;
-            key-positions = <6 7>;
+            key-positions = <19 30>;
         };
 
         for {
             bindings = <&kp LC(Y)>;
-            key-positions = <8 7>;
+            key-positions = <19 6>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <31 32>;
+            key-positions = <18 7>;
         };
 
         right_click {
@@ -116,17 +116,17 @@
 
         yamakakko {
             bindings = <&yamakakko>;
-            key-positions = <3 4>;
+            key-positions = <4 2>;
         };
 
         marukakko {
             bindings = <&marukakko>;
-            key-positions = <14 13>;
+            key-positions = <14 12>;
         };
 
         kagikakko {
             bindings = <&kagikakko>;
-            key-positions = <25 26>;
+            key-positions = <26 24>;
         };
 
         change-folder {
@@ -150,7 +150,7 @@
         };
 
         bikkuri {
-            bindings = <&kp LS(NUMBER_1)>;
+            bindings = <&none>;
             key-positions = <1 2>;
         };
 
