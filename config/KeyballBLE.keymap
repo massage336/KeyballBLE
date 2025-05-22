@@ -75,7 +75,7 @@
         };
 
         show-task {
-            bindings = <&none>;
+            bindings = <&shiftclick>;
             key-positions = <17 18>;
         };
 
@@ -116,17 +116,17 @@
 
         yamakakko {
             bindings = <&yamakakko>;
-            key-positions = <4 2>;
+            key-positions = <4 2 3>;
         };
 
         marukakko {
             bindings = <&marukakko>;
-            key-positions = <14 12>;
+            key-positions = <14 12 13>;
         };
 
         kagikakko {
             bindings = <&kagikakko>;
-            key-positions = <26 24>;
+            key-positions = <26 25 24>;
         };
 
         change-folder {
@@ -156,7 +156,7 @@
 
         in {
             bindings = <&in>;
-            key-positions = <11 12 13>;
+            key-positions = <18 7 8>;
         };
 
         mail {
@@ -166,7 +166,7 @@
 
         word {
             bindings = <&kp LG(NUMBER_3)>;
-            key-positions = <4 3 2>;
+            key-positions = <3 2 1>;
         };
 
         excel {
@@ -176,7 +176,7 @@
 
         ppt {
             bindings = <&kp LG(NUMBER_5)>;
-            key-positions = <26 25 24>;
+            key-positions = <25 24 23>;
         };
 
         pdf {
@@ -440,6 +440,21 @@
             bindings = <&kt GRAVE &kp LS(NUMBER_9) &kp GRAVE>;
             label = "RIGHTNUMKAKKO";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+
+        shiftclick: shiftclick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&macro_press>, <&mkp LCLK>;
+
+            label = "SHIFTCLICK";
+        };
     };
 
     behaviors {
@@ -467,10 +482,10 @@
 
         default_layer {
             bindings = <
-&lt 8 Q                        &kp W               &kp E                         &kp R                       &kp T                                                   &kp Y                 &kp U    &kp I      &kp O    &lt 4 P
-&kp A                          &kp S               &kp D                         &lt 6 F                     &kp G        &kp PRINTSCREEN          &kp SLASH         &kp H                 &lt 5 J  &kp K      &lt 7 L  &kp MINUS
-&mt LEFT_SHIFT Z               &kp X               &kp C                         &kp V                       &kp B        &mt LEFT_CONTROL F4      &kp SINGLE_QUOTE  &kp N                 &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
-&mt LEFT_CONTROL LS(NUMBER_1)  &mt LEFT_GUI GRAVE  &mt LEFT_ALT INTERNATIONAL_5  &lt_to_layer_0 2 BACKSPACE  &lt 3 SPACE  &kp DELETE               &lt 1 TAB         &mt LEFT_SHIFT ENTER                               &mt LEFT_CONTROL LS(SLASH)
+&lt 8 Q                        &kp W            &kp E                  &kp R          &kp T                                                      &kp Y                 &kp U    &kp I      &kp O    &lt 4 P
+&kp A                          &kp S            &kp D                  &lt 6 F        &kp G        &kp PRINTSCREEN             &kp SLASH         &kp H                 &lt 5 J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z               &kp X            &kp C                  &kp V          &kp B        &mt LEFT_CONTROL GRAVE      &kp SINGLE_QUOTE  &kp N                 &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
+&mt LEFT_CONTROL LS(NUMBER_1)  &mt LEFT_ALT F4  &lt 3 INTERNATIONAL_5  &kp BACKSPACE  &lt 2 SPACE  &kp DELETE                  &lt 1 TAB         &mt LEFT_SHIFT ENTER                               &mt LEFT_CONTROL LS(SLASH)
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -489,10 +504,10 @@
 
         NUM {
             bindings = <
-&none             &none  &Equal    &minus         &plus                                       &seven  &eight  &nine   &conma   &percent
-&none             &none  &sum      &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &to 2   &four   &five   &six    &zero    &yen
-&kp LEFT_SHIFT    &none  &average  &division      &multiply       &kp F2              &to 0   &one    &two    &three  &period  &kp LS(EQUAL)
-&kp LEFT_CONTROL  &none  &none     &trans         &trans          &trans              &trans  &trans                           &percent
+&none           &none  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
+&none           &none  &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
+&kp LEFT_SHIFT  &none  &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &none
+&to 0           &none  &none     &trans         &trans          &trans              &trans    &trans                           &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
@@ -500,10 +515,10 @@
 
         symbol {
             bindings = <
-&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp COMMA     &none
-&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp ESCAPE        &hyphen         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &none
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp RS(INT1)      &kp DOWN_ARROW  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &none
-&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans            &trans          &trans                                                  &none
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                             &kp COMMA     &kp N7        &kp NUMBER_8  &kp N9        &none
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp ESCAPE      &hyphen                  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp ESCAPE      &kp LS(INTERNATIONAL_1)  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans          &trans                   &trans                                                  &none
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
@@ -522,10 +537,10 @@
 
         SCROLL {
             bindings = <
-&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                           &none  &none  &none  &none  &kp LC(TAB)
-&none             &none             &none             &none             &kp LG(NUMBER_6)  &none             &none  &none  &none  &none  &none  &kp LS(LC(TAB))
-&none             &none             &none             &none             &none             &kp UP_ARROW      &none  &none  &none  &none  &none  &none
-&none             &none             &none             &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT         &none  &none                       &none
+&kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &kp LG(NUMBER_5)                           &none  &none  &kp LG(LEFT_ARROW)      &kp LG(RIGHT)      &none
+&none             &none             &none             &none             &kp LG(NUMBER_6)  &none             &none  &none  &none  &kp LG(TAB)             &kp LG(E)          &none
+&none             &none             &none             &none             &none             &kp UP_ARROW      &none  &none  &none  &kp LC(LG(LEFT_ARROW))  &kp LC(LG(RIGHT))  &none
+&none             &none             &none             &kp LEFT_ARROW    &kp DOWN_ARROW    &kp RIGHT         &none  &none                                                    &none
             >;
 
             sensor-bindings = <&inc_dec_kp LA(PAGE_DOWN) LA(PAGE_UP)>;
