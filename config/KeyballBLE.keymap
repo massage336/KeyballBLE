@@ -451,8 +451,7 @@
         shiftclick: shiftclick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&macro_press>, <&mkp LCLK>;
-
+            bindings = <&sk LEFT_SHIFT &mkp LCLK>;
             label = "SHIFTCLICK";
         };
     };
