@@ -26,22 +26,22 @@
 
         before {
             bindings = <&mkp MB4>;
-            key-positions = <31 18>;
+            key-positions = <30 31>;
         };
 
         pre {
             bindings = <&kp LC(Z)>;
-            key-positions = <19 30>;
+            key-positions = <6 7>;
         };
 
         for {
             bindings = <&kp LC(Y)>;
-            key-positions = <19 6>;
+            key-positions = <8 7>;
         };
 
         next {
             bindings = <&mkp MB5>;
-            key-positions = <18 7>;
+            key-positions = <31 32>;
         };
 
         right_click {
@@ -503,10 +503,10 @@
 
         NUM {
             bindings = <
-&none           &none  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
-&none           &none  &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
-&kp LEFT_SHIFT  &none  &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &none
-&to 0           &none  &none     &trans         &trans          &trans              &trans    &trans                           &to 2
+&kt LA(LC(S))  &kt LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
+&kt LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
+&kp LA(LC(I))  &none          &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &to 0
+&kt LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
