@@ -503,10 +503,10 @@
 
         NUM {
             bindings = <
-&kt LA(LC(S))  &kt LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
-&kt LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
+&kp LA(LC(S))  &kp LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
+&kp LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
 &kp LA(LC(I))  &none          &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &to 0
-&kt LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &to 2
+&kp LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
