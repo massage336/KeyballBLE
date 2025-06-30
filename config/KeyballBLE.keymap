@@ -55,7 +55,7 @@
         };
 
         desktop-left {
-            bindings = <&none>;
+            bindings = <&kp LG(LC(LEFT))>;
             key-positions = <29 30>;
         };
 
@@ -65,7 +65,7 @@
         };
 
         desktop-right {
-            bindings = <&none>;
+            bindings = <&kp LG(LC(RIGHT))>;
             key-positions = <32 33>;
         };
 
@@ -220,7 +220,7 @@
         };
 
         windows {
-            bindings = <&kp LEFT_GUI>;
+            bindings = <&folderopen>;
             key-positions = <30 32>;
         };
 
@@ -453,6 +453,13 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT &mkp LCLK>;
             label = "SHIFTCLICK";
+        };
+
+        folderopen: folderopen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(C) &kp LEFT_GUI &kp LC(V) &kp ENTER>;
+            label = "FOLDEROPEN";
         };
     };
 
