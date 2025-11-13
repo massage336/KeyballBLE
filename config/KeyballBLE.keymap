@@ -290,7 +290,7 @@
         in: in {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp P &kp N3 &kp N3 &kp N3 &kp NUMBER_4 &kp NUMBER_4 &kp NUMBER_4>;
+            bindings = <&kp LS(T) &kp P &kp N1 &kp NUMBER_1 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_2>;
             label = "IN";
         };
 
