@@ -461,6 +461,20 @@
             bindings = <&kp LC(C) &kp LEFT_GUI &kp LC(V) &kp ENTER>;
             label = "FOLDEROPEN";
         };
+
+        leftkagikakko: leftkagikakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt GRAVE &kp LEFT_BRACKET &kp GRAVE>;
+            label = "LEFTKAGIKAKKO";
+        };
+
+        rightkagikakko: rightkagikakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt GRAVE &kp NUHS &kp GRAVE>;
+            label = "RIGHTKAGIKAKKO";
+        };
     };
 
     behaviors {
@@ -488,13 +502,13 @@
 
         default_layer {
             bindings = <
-&lt 8 Q           &kp W            &kp E                  &kp R          &kp T                                                                &kp Y                 &kp U    &kp I      &kp O    &lt 4 P
-&kp A             &kp S            &kp D                  &lt 6 F        &kp G        &kp PRINTSCREEN                       &kp SLASH         &kp H                 &lt 5 J  &kp K      &kp L    &kp MINUS
-&kp Z             &kp X            &kp C                  &kp V          &kp B        &mt LEFT_CONTROL INTERNATIONAL_4      &kp SINGLE_QUOTE  &kp N                 &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
-&kp LS(NUMBER_1)  &mt LEFT_ALT F4  &lt 3 INTERNATIONAL_5  &kp BACKSPACE  &lt 2 SPACE  &kp DELETE                            &lt 1 TAB         &mt LEFT_SHIFT ENTER                               &mt LEFT_CONTROL LS(SLASH)
+&lt 8 Q           &kp W            &kp E                  &kp R          &kp T                                                            &kp Y                 &kp U    &kp I      &kp O    &lt 4 P
+&kp A             &kp S            &kp D                  &lt 6 F        &kp G        &kp PRINTSCREEN                   &kp SLASH         &kp H                 &lt 5 J  &kp K      &kp L    &kp MINUS
+&kp Z             &kp X            &kp C                  &kp V          &kp B        &mt LEFT_ALT INTERNATIONAL_4      &kp SINGLE_QUOTE  &kp N                 &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
+&kp LS(NUMBER_1)  &mt LEFT_ALT F4  &lt 3 INTERNATIONAL_5  &kp BACKSPACE  &lt 2 SPACE  &kp DELETE                        &lt 1 TAB         &mt LEFT_SHIFT ENTER                               &mt LEFT_CONTROL LS(SLASH)
             >;
 
-            sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT)) LC(LG(LEFT_ARROW))>;
         };
 
         FUNCTION {
@@ -510,10 +524,10 @@
 
         NUM {
             bindings = <
-&kp LA(LC(S))  &kp LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &percent
-&kp LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &yen
-&kp LA(LC(I))  &none          &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &period
-&kp LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &none
+&kp LA(LC(S))  &kp LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &plus
+&kp LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &minus
+&kp LA(LC(I))  &none          &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &multiply
+&kp LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &division
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT LEFT_ARROW>;
