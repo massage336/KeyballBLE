@@ -1,10 +1,10 @@
 include:
-  - board: seeeduino_xiao_ble
+  - board: seeed_xiao_ble
     shield: KeyballBLE_R
     cmake-args: -DCONFIG_ZMK_STUDIO=n
-  - board: seeeduino_xiao_ble
+  - board: seeed_xiao_ble
     shield: KeyballBLE_L
     cmake-args: -DCONFIG_ZMK_STUDIO=n
-  - board: seeeduino_xiao_ble
+  - board: seeed_xiao_ble
     shield: settings_reset
     cmake-args: -DCONFIG_ZMK_STUDIO=n
