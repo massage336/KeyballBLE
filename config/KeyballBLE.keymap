@@ -475,6 +475,13 @@
             bindings = <&kt GRAVE &kp NUHS &kp GRAVE>;
             label = "RIGHTKAGIKAKKO";
         };
+
+        under: under {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp LS(INT_RO) &kp GRAVE>;
+            label = "UNDER";
+        };
     };
 
     behaviors {
@@ -524,7 +531,7 @@
 
         NUM {
             bindings = <
-&kp LA(LC(S))  &kp LC(LA(Q))  &sum      &minus         &plus                                         &conma   &seven  &eight  &nine   &plus
+&kp LA(LC(S))  &kp LC(LA(Q))  &sum      &minus         &under                                        &conma   &seven  &eight  &nine   &plus
 &kp LA(LC(C))  &none          &average  &leftnumkakko  &rightnumkakko  &kp KP_NUMLOCK      &Equal    &zero    &four   &five   &six    &minus
 &kp LA(LC(I))  &none          &none     &division      &multiply       &kp F2              &percent  &period  &one    &two    &three  &multiply
 &kp LA(LC(D))  &none          &none     &trans         &trans          &trans              &trans    &trans                           &division
@@ -535,10 +542,10 @@
 
         symbol {
             bindings = <
-&kp LS(INT_RO)          &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                             &kp COMMA     &kp N7        &kp NUMBER_8  &kp N9        &kp LS(SEMI)
-&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp ESCAPE      &hyphen                  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp UNDER       &kp LS(INTERNATIONAL_1)  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(APOS)
-&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans          &trans                   &trans                                                  &kp SLASH
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(COMMA)      &kp LS(PERIOD)                                       &kp COMMA     &kp N7        &kp NUMBER_8  &kp N9        &kp LS(SEMI)
+&kp LS(NUMBER_4)        &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)  &kp ESCAPE          &kp LS(MINUS)  &kp NUMBER_0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
+&mt LEFT_SHIFT INT_YEN  &kp RS(LBRC)      &kp LS(INT_YEN)   &kp RIGHT_BRACKET  &kp NUHS          &kp LS(INT_RO)      &kp PERCENT    &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(APOS)
+&kp LEFT_CONTROL        &kp SEMICOLON     &kp LEFT_BRACKET  &trans             &trans            &trans              &trans         &trans                                                  &kp SLASH
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT_ARROW)>;
