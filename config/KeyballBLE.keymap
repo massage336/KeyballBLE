@@ -104,13 +104,13 @@
             key-positions = <20 19 21>;
         };
 
-        left-tab {
-            bindings = <&kp LC(LS(TAB))>;
+        serch {
+            bindings = <&kp LC(F)>;
             key-positions = <5 6 7>;
         };
 
-        right-tab {
-            bindings = <&kp LC(TAB)>;
+        all-close {
+            bindings = <&kp LA(F4)>;
             key-positions = <7 8 9>;
         };
 
@@ -129,13 +129,13 @@
             key-positions = <26 25 24>;
         };
 
-        change-folder {
-            bindings = <&kp LG(NUMBER_1)>;
+        pastecontrol {
+            bindings = <&kp LG(V)>;
             key-positions = <29 30 31>;
         };
 
-        change-chrome {
-            bindings = <&kp LG(NUMBER_2)>;
+        show-desktop {
+            bindings = <&kp LG(D)>;
             key-positions = <31 32 33>;
         };
 
@@ -227,6 +227,11 @@
         hyphen {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <25 24>;
+        };
+
+        id {
+            bindings = <&id>;
+            key-positions = <17 6 7>;
         };
     };
 
@@ -482,6 +487,13 @@
             bindings = <&kp GRAVE &kp LS(INT_RO) &kp GRAVE>;
             label = "UNDER";
         };
+
+        id: id {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp P &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_0 &kp NUMBER_8 &kp NUMBER_8 &kp NUMBER_3>;
+            label = "ID";
+        };
     };
 
     behaviors {
@@ -564,10 +576,10 @@
 
         SCROLL {
             bindings = <
-&none  &none  &none  &none           &none                                            &kp LC(LS(TAB))   &none             &kp LG(UP_ARROW)           &none              &kp LC(TAB)
-&none  &none  &none  &none           &none           &none             &kp LA(LC(S))  &kp LC(NUMBER_1)  &kp LG(LEFT)      &none                      &kp LG(RIGHT)      &kp LG(NUMBER_1)
-&none  &none  &none  &none           &none           &kp UP_ARROW      &kp LG(E)      &kp LG(TAB)       &kp LC(LG(LEFT))  &mt LEFT_CONTROL LG(DOWN)  &kp LG(LC(RIGHT))  &kp LG(NUMBER_2)
-&none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &kp LA(TAB)    &kp RA(ESCAPE)                                                                    &kp LG(NUMBER_3)
+&none  &none  &none  &none           &none                                              &kp LC(LS(TAB))   &none             &kp LG(UP_ARROW)           &none              &kp LC(TAB)
+&none  &none  &none  &none           &none           &none             &kp PRINTSCREEN  &kp LC(NUMBER_1)  &kp LG(LEFT)      &none                      &kp LG(RIGHT)      &kp LG(NUMBER_1)
+&none  &none  &none  &none           &none           &kp UP_ARROW      &kp LG(E)        &kp LA(LC(S))     &kp LC(LG(LEFT))  &mt LEFT_CONTROL LG(DOWN)  &kp LG(LC(RIGHT))  &kp LG(NUMBER_2)
+&none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &kp LG(TAB)      &kp RA(ESCAPE)                                                                    &kp LG(NUMBER_3)
             >;
 
             sensor-bindings = <&inc_dec_kp LA(PAGE_DOWN) LA(PAGE_UP)>;
