@@ -49,33 +49,8 @@
             key-positions = <19 20>;
         };
 
-        screen-left {
-            bindings = <&none>;
-            key-positions = <5 6>;
-        };
-
-        desktop-left {
-            bindings = <&kp LG(LC(LEFT))>;
-            key-positions = <29 30>;
-        };
-
-        screen-right {
-            bindings = <&none>;
-            key-positions = <8 9>;
-        };
-
-        desktop-right {
-            bindings = <&kp LG(LC(RIGHT))>;
-            key-positions = <32 33>;
-        };
-
-        new-folder {
-            bindings = <&none>;
-            key-positions = <20 21>;
-        };
-
-        show-task {
-            bindings = <&shiftclick>;
+        left-tab {
+            bindings = <&kp LC(LS(TAB))>;
             key-positions = <17 18>;
         };
 
@@ -139,19 +114,14 @@
             key-positions = <31 32 33>;
         };
 
-        maru {
+        right {
             bindings = <&kp RIGHT>;
             key-positions = <13 12>;
         };
 
-        dablekolon {
+        up {
             bindings = <&kp UP_ARROW>;
             key-positions = <3 2>;
-        };
-
-        bikkuri {
-            bindings = <&none>;
-            key-positions = <1 2>;
         };
 
         in {
@@ -184,37 +154,12 @@
             key-positions = <22 23 24>;
         };
 
-        home {
-            bindings = <&kp HOME>;
-            key-positions = <37 13>;
+        right-tab {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <21 20>;
         };
 
-        end {
-            bindings = <&kp END>;
-            key-positions = <39 13>;
-        };
-
-        start {
-            bindings = <&kp LC(HOME)>;
-            key-positions = <16 13>;
-        };
-
-        last {
-            bindings = <&kp LC(END)>;
-            key-positions = <28 13>;
-        };
-
-        pageup {
-            bindings = <&kp PAGE_UP>;
-            key-positions = <16 17>;
-        };
-
-        pagedown {
-            bindings = <&kp PAGE_DOWN>;
-            key-positions = <28 29>;
-        };
-
-        question {
+        left {
             bindings = <&kp LEFT>;
             key-positions = <11 12>;
         };
@@ -224,7 +169,7 @@
             key-positions = <30 32>;
         };
 
-        hyphen {
+        under {
             bindings = <&kp DOWN_ARROW>;
             key-positions = <25 24>;
         };
@@ -521,10 +466,10 @@
 
         default_layer {
             bindings = <
-&lt 8 Q                        &kp W     &kp E                  &kp R          &kp T                                                            &kp Y                 &kp U  &kp I      &kp O    &lt 4 P
-&kp A                          &kp S     &kp D                  &lt 6 F        &kp G        &kp PRINTSCREEN                   &kp SLASH         &kp H                 &kp J  &lt 5 K    &kp L    &mt LEFT_ALT MINUS
-&kp Z                          &kp X     &kp C                  &kp V          &kp B        &mt LEFT_ALT INTERNATIONAL_4      &kp SINGLE_QUOTE  &kp N                 &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
-&mt LEFT_CONTROL LS(NUMBER_1)  &lt 1 F4  &lt 3 INTERNATIONAL_5  &kp BACKSPACE  &lt 2 SPACE  &kp DELETE                        &lt 3 TAB         &mt LEFT_SHIFT ENTER                             &mt LEFT_CONTROL LS(SLASH)
+&lt 8 Q              &kp W           &kp E      &kp R          &kp T                                               &kp Y                 &kp U    &kp I      &kp O    &lt 4 P
+&kp A                &kp S           &kp D      &lt 6 F        &kp G        &kp PRINTSCREEN      &kp SLASH         &kp H                 &lt 5 J  &lt 5 K    &kp L    &mt LEFT_ALT MINUS
+&kp Z                &kp X           &kp C      &kp V          &kp B        &lt 1 GRAVE          &kp SINGLE_QUOTE  &kp N                 &kp M    &kp COMMA  &kp DOT  &mt RIGHT_SHIFT LS(EQUAL)
+&mt LEFT_CONTROL F4  &kp LEFT_ARROW  &kp RIGHT  &kp BACKSPACE  &lt 2 SPACE  &kp DELETE           &lt 3 TAB         &mt LEFT_SHIFT ENTER                               &mt LEFT_CONTROL LS(SLASH)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -532,10 +477,10 @@
 
         FUNCTION {
             bindings = <
-&kp TAB  &kp LS(TAB)  &kp LS(LC(SEMI))  &kp LC(L)          &kp LC(E)                                                &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none    &none        &none             &kp LS(LC(COMMA))  &kp LS(LC(PERIOD))  &kp C_MUTE      &kp INTERNATIONAL_4  &kp F4  &kp F5  &kp F6  &kp F11  &none
-&none    &none        &none             &none              &none               &kp ESCAPE      &kp INTERNATIONAL_5  &kp F1  &kp F2  &kp F3  &kp F12  &none
-&none    &none        &none             &trans             &trans              &trans          &trans               &trans                           &none
+&kp ESCAPE  &kp LS(TAB)  &kp LS(LC(SEMI))  &kp LC(L)          &kp LC(E)                                                &kp F7  &kp F8  &kp F9  &kp F10  &none
+&none       &none        &none             &kp LS(LC(COMMA))  &kp LS(LC(PERIOD))  &kp C_MUTE      &kp INTERNATIONAL_4  &kp F4  &kp F5  &kp F6  &kp F11  &none
+&none       &none        &none             &none              &none               &none           &kp INTERNATIONAL_5  &kp F1  &kp F2  &kp F3  &kp F12  &none
+&none       &none        &none             &trans             &trans              &trans          &trans               &trans                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -576,8 +521,8 @@
 
         SCROLL {
             bindings = <
-&none  &none  &none  &none           &none                                              &kp LC(LS(TAB))   &none             &kp LG(UP_ARROW)           &none              &kp LC(TAB)
-&none  &none  &none  &none           &none           &none             &kp PRINTSCREEN  &kp LC(NUMBER_1)  &kp LG(LEFT)      &none                      &kp LG(RIGHT)      &kp LG(NUMBER_1)
+&none  &none  &none  &none           &none                                              &kp LC(NUMBER_1)  &none             &none                      &none              &kp LC(NUMBER_4)
+&none  &none  &none  &none           &none           &none             &kp PRINTSCREEN  &kp LG(UP_ARROW)  &kp LG(LEFT)      &none                      &kp LG(RIGHT)      &kp LG(NUMBER_1)
 &none  &none  &none  &none           &none           &kp UP_ARROW      &kp LG(E)        &kp LA(LC(S))     &kp LC(LG(LEFT))  &mt LEFT_CONTROL LG(DOWN)  &kp LG(LC(RIGHT))  &kp LG(NUMBER_2)
 &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT         &kp LG(TAB)      &kp RA(ESCAPE)                                                                    &kp LG(NUMBER_3)
             >;
