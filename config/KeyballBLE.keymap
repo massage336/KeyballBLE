@@ -240,7 +240,7 @@
         in: in {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp P &kp N1 &kp NUMBER_1 &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_2 &kp NUMBER_2>;
+            bindings = <&kp LS(T) &kp P &kp NUMBER_3 &kp NUMBER_3 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_4 &kp NUMBER_4>;
             label = "IN";
         };
 
